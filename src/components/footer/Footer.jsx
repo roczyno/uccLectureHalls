@@ -9,7 +9,7 @@ const Footer = () => {
   return (
     <div className="footer">
       <div className="container">
-        <p>Copyright © 2022 All rights reserved | made with by Roczyno</p>
+        <p>Copyright © 2023 All rights reserved | made love with by Roczyno</p>
         <div className="icons">
           <div className="icon-item">
             <FacebookOutlinedIcon className="icon" />
