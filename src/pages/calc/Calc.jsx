@@ -9,6 +9,13 @@ import axios from "axios";
 import CALC from "../../img/calc.jpg";
 
 const Calc = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [selectedLectureHall, setSelectedLectureHall] = useState(null);
+  const [currentAvailability, setCurrentAvailability] = useState([]);
+  const [startTime, setStartTime] = useState("");
+  const [endTime, setEndTime] = useState("");
+  const [bookingSuccess, setBookingSuccess] = useState(false);
+  const [unBookingSuccess, setUnbookingSuccess] = useState(false);
   const [CalcLecture, setCalcLecture] = useState([
     {
       id: 1,
@@ -138,14 +145,6 @@ const Calc = () => {
       ],
     },
   ]);
-
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [selectedLectureHall, setSelectedLectureHall] = useState(null);
-  const [currentAvailability, setCurrentAvailability] = useState([]);
-  const [startTime, setStartTime] = useState("");
-  const [endTime, setEndTime] = useState("");
-  const [bookingSuccess, setBookingSuccess] = useState(false);
-  const [unBookingSuccess, setUnbookingSuccess] = useState(false);
 
   //connect to the backend
 

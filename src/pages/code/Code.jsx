@@ -8,6 +8,13 @@ import CODE from "../../img/code.jpg";
 import axios from "axios";
 
 const Code = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [selectedLectureHall, setSelectedLectureHall] = useState(null);
+  const [currentAvailability, setCurrentAvailability] = useState([]);
+  const [startTime, setStartTime] = useState("");
+  const [endTime, setEndTime] = useState("");
+  const [bookingSuccess, setBookingSuccess] = useState(false);
+  const [unBookingSuccess, setUnbookingSuccess] = useState(false);
   const [CodeLecture, setCodeLecture] = useState([
     {
       id: 1,
@@ -137,14 +144,6 @@ const Code = () => {
       ],
     },
   ]);
-
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [selectedLectureHall, setSelectedLectureHall] = useState(null);
-  const [currentAvailability, setCurrentAvailability] = useState([]);
-  const [startTime, setStartTime] = useState("");
-  const [endTime, setEndTime] = useState("");
-  const [bookingSuccess, setBookingSuccess] = useState(false);
-  const [unBookingSuccess, setUnbookingSuccess] = useState(false);
 
   //connect to the backend
 
