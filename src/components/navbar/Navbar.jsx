@@ -1,6 +1,7 @@
 import "./navbar.scss";
 import Jacob from "../../img/jacob.jpg";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = ({ menuOpen, setMenuOpen }) => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -29,8 +30,16 @@ const Navbar = ({ menuOpen, setMenuOpen }) => {
         </div>
         <div className="user">
           <div className="name">Jacob</div>
-          <img src={Jacob} />
-          <span>LOGOUT</span>
+          <Link
+            style={{
+              textDecoration: "none",
+              cursor: "pointer",
+              color: "inherit",
+            }}
+            to="/login"
+          >
+            <span>LOGIN</span>
+          </Link>
         </div>
       </div>
     </div>

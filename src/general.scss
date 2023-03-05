@@ -1,7 +1,6 @@
 .calc {
   width: 100%;
   height: 100%;
-
   overflow-x: hidden;
   position: relative;
 
@@ -50,6 +49,69 @@
 
     flex-wrap: wrap;
     gap: 30px;
+
+    width: 100%;
+    height: auto;
+
+    .book {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      position: absolute;
+      top: 40%;
+      right: 5%;
+      gap: 30px;
+      width: 100%;
+      color: #eaa023;
+
+      table {
+        text-align: center;
+        border-spacing: 0;
+        border-collapse: collapse;
+        border-radius: 12px 12px 0 0;
+        background-color: aqua;
+        overflow: hidden;
+        box-shadow: 0 2px 12px rgba(32, 32, 32, 0.3);
+
+        thead {
+          background-color: #0c1023;
+        }
+        th,
+        td {
+          padding: 8px 15px;
+        }
+      }
+
+      .below {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-direction: column;
+      }
+
+      label {
+        margin-right: 20px;
+      }
+
+      select {
+        padding: 5px;
+        border-radius: 5px;
+        font-size: 15px;
+        &:focus {
+          outline: none;
+        }
+      }
+      .button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+
+        button {
+          padding: 20px;
+        }
+      }
+    }
     .item {
       height: 170px;
       width: 170px;
